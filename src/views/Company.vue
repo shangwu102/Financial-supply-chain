@@ -167,20 +167,20 @@ export default {
       console.log(row);
       this.transDialogVisible = true
       this.transDetail.senderAddress = row.address;
-      this.transDetail.accepterAddress = this.$cookies.get('address')
+      this.transDetail.accepterAddress = 选手填写部分
       console.log(this.transDetail.accepterAddress);
     },
     executeTransaction: function() {
       let funcName = "companyToCompanyReceipt";
-      if (this.transDetail.amount =='') {
+      if (this.transDetail.amount ==选手填写部分) {
         alert('交易额不能为空！')
         return
       }
       //操作账户是银行，银行转账给公司，发送凭证给银行
-      if (this.$cookies.get('orgType') == 2) {
+      if (this.$cookies.get('orgType') == 选手填写部分) {
         funcName = "bankToCompanyReceipt"
       }
-      if (this.transDetail.accepterAddress == this.transDetail.senderAddress) {
+      if (选手填写部分) {
         alert("凭证发送账户和接收账户不能相一致！")
         return
       }
